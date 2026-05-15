@@ -1,0 +1,146 @@
+{
+    "best_hyperparameters": {
+        "KNN_Regressor": {
+            "metric": "manhattan",
+            "n_neighbors": 2
+        },
+        "KNN_Classifier": {
+            "metric": "manhattan",
+            "n_neighbors": 13
+        },
+        "XGBoost_Regressor": {
+            "colsample_bytree": 1.0,
+            "learning_rate": 0.2,
+            "max_depth": 3,
+            "n_estimators": 300,
+            "subsample": 0.7
+        },
+        "XGBoost_Classifier": {
+            "colsample_bytree": 0.8,
+            "learning_rate": 0.1,
+            "max_depth": 3,
+            "n_estimators": 300,
+            "subsample": 0.7
+        },
+        "SVR": {
+            "C": 100,
+            "gamma": "scale",
+            "kernel": "rbf"
+        },
+        "SVC": {
+            "C": 10,
+            "gamma": "scale",
+            "kernel": "rbf"
+        }
+    },
+    "cv_stability": {
+        "KNN_Regressor": {
+            "metric": "R2",
+            "scores": [
+                0.845,
+                0.8018,
+                0.8352,
+                0.8114,
+                0.8589
+            ],
+            "mean": 0.8305,
+            "std": 0.0211
+        },
+        "SVR": {
+            "metric": "R2",
+            "scores": [
+                0.9585,
+                0.9105,
+                0.9401,
+                0.9581,
+                0.9469
+            ],
+            "mean": 0.9428,
+            "std": 0.0176
+        },
+        "XGBoost_Regressor": {
+            "metric": "R2",
+            "scores": [
+                0.9751,
+                0.9678,
+                0.9799,
+                0.9865,
+                0.9845
+            ],
+            "mean": 0.9788,
+            "std": 0.0068
+        },
+        "Stacking_Regressor": {
+            "metric": "R2",
+            "scores": [
+                0.9737,
+                0.9663,
+                0.9783,
+                0.9863,
+                0.985
+            ],
+            "mean": 0.9779,
+            "std": 0.0074
+        },
+        "KNN_Classifier": {
+            "metric": "Accuracy",
+            "scores": [
+                0.8043,
+                0.8081,
+                0.8046,
+                0.7918,
+                0.7985
+            ],
+            "mean": 0.8014,
+            "std": 0.0057
+        },
+        "SVC": {
+            "metric": "Accuracy",
+            "scores": [
+                0.8433,
+                0.8576,
+                0.8548,
+                0.8487,
+                0.842
+            ],
+            "mean": 0.8493,
+            "std": 0.0061
+        },
+        "XGBoost_Classifier": {
+            "metric": "Accuracy",
+            "scores": [
+                0.864,
+                0.871,
+                0.8802,
+                0.8665,
+                0.857
+            ],
+            "mean": 0.8677,
+            "std": 0.0077
+        },
+        "Stacking_Classifier": {
+            "metric": "Accuracy",
+            "scores": [
+                0.8675,
+                0.8719,
+                0.8767,
+                0.8694,
+                0.8611
+            ],
+            "mean": 0.8693,
+            "std": 0.0051
+        }
+    },
+    "system_comparison": {
+        "Regression": {
+            "A2_LinearReg_TestR2": 0.4659,
+            "A3_StackingEnsemble_TestR2": 0.9665,
+            "improvement_%": 107.44
+        },
+        "Classification": {
+            "A2_LogisticReg_TestAcc": 0.8027,
+            "A3_StackingEnsemble_TestAcc": 0.8696,
+            "improvement_%": 8.33
+        }
+    }
+}
